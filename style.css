@@ -1,8 +1,8 @@
-@charset "utf-8";
 html { box-sizing: border-box; }
+@charset "utf-8";
 *, *:before, *:after { box-sizing: inherit; }
 body {
-	background: url('https://source.unsplash.com/collection/292287/') no-repeat center center fixed;
+	background: url('https://source.unsplash.com/collection/304263') no-repeat center center fixed;
 	background-size: cover;
 	text-transform: lowercase;
 	font-family: monospace;
@@ -19,13 +19,21 @@ div#background {
 div.centerWrapper {
 	transform: translateY(-50%);
 	position: absolute;
-	width: 40%;
+	width: 45%;
 	left: 30%;
 	top: 50%;
 }
 div.timeDate {
-	font-size: xx-large;
-	padding: 0 15px 2.5rem;
+	font-size: x-large;
+	padding: 0 15px 1rem;	
+	text-align: left;
+	width: 50%
+}
+div.weather {
+	font-size: x-large;
+	padding: 0 15px 1rem;
+	text-align: right;
+	width: 50%
 }
 ul {
 	list-style: none;
@@ -42,7 +50,7 @@ a {
 	display: block;
 	outline: none;
 	padding: 15px;
-	color: #111;
+	color: #555;
 }
 a:after {
 	transition: all .15s;
@@ -59,13 +67,25 @@ p {
 	padding: 15px;
 	margin: 0;
 }
-p.top, p.bottom {
+
+p.top    { 
+	top:    0%; 
 	position: absolute;
 	font-size: smaller;
 	width: 100%;
+	text-align: center;
 }
-p.top    { top:    0%; }
-p.bottom { bottom: 0%; }
+p.bottom    { 
+	bottom:    0%; 
+	position: absolute;
+	font-size: smaller;
+	width: 100%;
+	text-align: right;
+	color: #000;
+}
+p.bottom a {
+	color: inherit;
+}
 p a {
 	display: inline-block;
 	color: inherit;
@@ -76,13 +96,28 @@ p a:hover { text-decoration: underline; }
 .clear { clear: both; }
 .left  { float: left; }
 .right { float: right; }
-.text-right { text-align: right; }
 div.right, div.left { width: 50%; }
 .no-transform { text-transform: none; }
-ul.box li a { background-color: rgba(255, 255, 255, 0.4); }
-ul li a:hover, ul li a.active, ul li a.active + ul.subMenu li a { background-color: rgba(255, 255, 255, 0.6); }
-.fadeIn { animation: fadeIn 0.75s 0.75s both ease-in; }
+.lowercase { text-transform: lowercase; }
+ul.box li a { background-color: rgba(10, 10, 10, 0.8); }
+ul li a:hover, ul li a.active, ul li a.active + ul.subMenu li a { background-color: rgba(10, 10, 10, 0.9); }
+.fadeIn { animation: fadeIn 0.4s 0.4s both ease-in; }
 @keyframes fadeIn {
 	from { opacity: 0; }
 	to   { opacity: 1; }
+}
+.searchbox {
+	font-family: monospace;
+    color: #555;
+    font-weight: 400;
+    font-size: 100%;
+    background-color: rgba(10, 10, 10, 0.8);
+    padding: 15px;		
+    display: block;
+    border: none;      
+    text-align: left;
+	width: 100%;
+}
+.searchbox:focus {
+    outline: none;
 }
