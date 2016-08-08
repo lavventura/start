@@ -1,6 +1,6 @@
 # ~start [https://lavventura.github.io/start/](LIVE)
 
-![https://lavventura.github.io/start/](screenshot.png)
+![https://lavventura.github.io/start/](screen.png)
 
 ##New tab page with powerful searchbar, bookmarks, weather, and nice image backgrounds which can replace your browser's adress bar completely.
 
