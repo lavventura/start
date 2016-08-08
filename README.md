@@ -18,7 +18,7 @@ Press [W] to get detailed weather information for your location from Yahoo! Weat
 
 Search bar script from [@WillEccles](https://github.com/WillEccles) allows this start page work as a complete replacement to your browser's adress bar.
 
-Type 'help' to get complete list of commands and search engines.
+Type 'help' to get the list of commands and search engines.
 
 ##Examples:
 - 'search query' navigates you to duckduckgo's result page for your search query.
