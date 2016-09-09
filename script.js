@@ -1,5 +1,4 @@
 // SEARCHBAR
-
 var box = document.getElementById("search box");
 
 // this should catch most URLs, or at least the ones I would type.
@@ -38,10 +37,7 @@ function searchKeyPress(e) {
 	}
 }
 
-// when you hover a link, show its href
-function aTitle(e) {
-	e.title = e.href;
-}
+
 
 // focus the search box on load
 window.onload = function() {
@@ -54,12 +50,11 @@ function parseCom(com) {
 	if (/^h[ea]lp$/i.test(com) || /^commands$/i.test(com)) {
 		document.location.href = "commands.txt";
 	}
-
 	
 	// handle reddit command
-	else if (com.startsWith("reddit")==true) {
+	else if (com.startsWith("rdt")==true) {
 		// if any of the custom subreddit commands are matched
-		if (/^reddit [A-Za-z]{2,2}$/i.test(com)) {
+		if (/^rdt [A-Za-z]{2,2}$/i.test(com)) {
 			var subargs = com.split(" ");
 			switch (subargs.pop()) {
 				case "df":
@@ -80,22 +75,22 @@ function parseCom(com) {
 			}
 		}
 		// if the subreddit command is matched
-		else if (/^reddit -r .*$/i.test(com)) {
+		else if (/^rdt -r .*$/i.test(com)) {
 			var rargs = com.split(" ");
 			nav("https://www.reddit.com/r/" + rargs.pop());
 		}		
 		// if the user command is matched
-		else if (/^reddit -u .*$/i.test(com)) {
+		else if (/^rdt -u .*$/i.test(com)) {
 			var uargs = com.split(" ");
 			nav("https://www.reddit.com/u/" + uargs.pop());
 		}
 		// if the search command is matched
-		else if (/^reddit -s .{1,140}$/i.test(com)) {
-			var query = com.replace(/^reddit -s /i, "");
+		else if (/^rdt -s .{1,140}$/i.test(com)) {
+			var query = com.replace(/^rdt -s /i, "");
 			nav("https://www.reddit.com/search?q=" + encodeURIComponent(query));
 		}	
 		// if the plain old reddit command is matched
-		else if (/^reddit$/i.test(com)) {
+		else if (/^rdt$/i.test(com)) {
 			nav("https://www.reddit.com/");
 		}
 		// if anything else, it'll just google it because who cares
@@ -265,7 +260,17 @@ function parseCom(com) {
 			var query = com.replace(/^git /i, "");
 			nav("https://www.github.com/search?q=" + encodeURIComponent(query));
 		}
-	}	
+	}
+		// handle stackexchange command
+	else if (com.startsWith("stack")==true) {
+		if (/^stack$/i.test(com)) {
+			nav("https://www.stackexchange.com");
+		}		
+		else if (/^stack .{1,140}$/i.test(com)) {
+			var query = com.replace(/^stack /i, "");
+			nav("https://www.stackexchange.com/search?q=" + encodeURIComponent(query));
+		}
+	}
 	// handle tpb command
 	else if (com.startsWith("tpb")==true) {
 		if (/^tpb$/i.test(com)) {
@@ -275,8 +280,17 @@ function parseCom(com) {
 			var query = com.replace(/^tpb /i, "");
 			nav("https://thepiratebay.org/search/" + encodeURIComponent(query));
 		}
+	}
+		// handle torrentproject command
+	else if (com.startsWith("tp")==true) {
+		if (/^tp$/i.test(com)) {
+			nav("http://torrentproject.se");
+		}		
+		else if (/^tp .{1,140}$/i.test(com)) {
+			var query = com.replace(/^tp /i, "");
+			nav("http://torrentproject.se/?t=" + encodeURIComponent(query));
+		}
 	}	
-	// handle wiki command
 	else if (com.startsWith("wiki")==true) {
 		if (/^wiki$/i.test(com)) {
 			nav("https://en.wikipedia.org");
@@ -368,8 +382,7 @@ function getWeather(location) {
 		location: 'Warsaw, Poland',
 		unit: 'c',
 		success: function(weather) {
-			$('.weather').html(weather.city + '</br>' + weather.currently + ', ' + weather.temp + '&deg;');
-			$('.weatherlink').html('<a href="' + weather.link + '">[W]</a>');
+			$('.weather').html('<a href="' + weather.link + '">' + weather.city + '</a>' + '</br>' + weather.currently + ', ' + weather.temp + '&deg;');
 		},
 		error: function(error)   {
 			$('.weather').html('Sorry, there has been a problem retrieving the weather information.');
@@ -415,13 +428,7 @@ function bindMousetraps() {
 	});	
 }
 
-// Closes cells, rebinds keyboard shortcuts
-function resetMousetraps() {
-	$('.subMenu').slideUp(150);
-	$('li a').removeClass('active');
-	Mousetrap.reset();
-	bindMousetraps();
-}
+
 
 // Initializes everything on page load
 $(function() {
