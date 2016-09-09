@@ -1,7 +1,7 @@
 html { box-sizing: border-box; }
 @charset "utf-8";
 *, *:before, *:after { box-sizing: inherit; }
-body {
+body {	
 	background: url('https://source.unsplash.com/collection/304263') no-repeat center center fixed;
 	background-size: cover;
 	text-transform: lowercase;
@@ -35,6 +35,22 @@ div.weather {
 	text-align: right;
 	width: 50%
 }
+div.weather a {
+	color: inherit;
+	display: inline;
+	padding: 0;
+}
+div.weather a:hover {
+	text-decoration: underline;
+}
+div.weather a:after {
+	transition: none;
+	content: none;
+}
+div.weather a:hover:after {	
+	padding: 0;
+}
+
 ul {
 	list-style: none;
 	padding: 0;
@@ -67,32 +83,6 @@ p {
 	padding: 15px;
 	margin: 0;
 }
-
-p.top    { 
-	top:    0%; 
-	position: absolute;
-	font-size: smaller;
-	width: 100%;
-	text-align: center;
-}
-p.bottom    { 
-	bottom:    0%; 
-	position: absolute;
-	font-size: smaller;
-	width: 100%;
-	text-align: right;
-	color: #000;
-}
-p.bottom a {
-	color: inherit;
-}
-p a {
-	display: inline-block;
-	color: inherit;
-	padding: 0;
-}
-p a:after { display: none; }
-p a:hover { text-decoration: underline; }
 .clear { clear: both; }
 .left  { float: left; }
 .right { float: right; }
@@ -108,7 +98,7 @@ ul li a:hover, ul li a.active, ul li a.active + ul.subMenu li a { background-col
 }
 .searchbox {
 	font-family: monospace;
-    color: #555;
+    color: #999;
     font-weight: 400;
     font-size: 100%;
     background-color: rgba(10, 10, 10, 0.8);
@@ -120,4 +110,7 @@ ul li a:hover, ul li a.active, ul li a.active + ul.subMenu li a { background-col
 }
 .searchbox:focus {
     outline: none;
+}
+li {
+    display: none;
 }
