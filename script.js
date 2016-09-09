@@ -390,13 +390,17 @@ function getWeather(location) {
 	});
 }
 
-// Geolocates the user, otherwise defaulting to Pittsburgh (2473224)
-function loadStuff() {	
-	if('geolocation' in navigator) {
-		navigator.geolocation.getCurrentPosition(function(position) {
-	    	getWeather(position.coords.latitude + ',' + position.coords.longitude);
-	  	}, getWeather(2473224), {timeout: 5000});
-	} else { getWeather(2473224); }
+ // Geolocates the user, otherwise defaulting to Warsaw
+ function loadStuff() {
+if('geolocation' in navigator) {
+	navigator.geolocation.getCurrentPosition(function(position) {
+		getWeather(position.coords.latitude + ',' + position.coords.longitude);
+	});
+	getWeather('Warsaw, Poland')
+	// navigator.geolocation.getCurrentPosition(function(position) {
+	//   	getWeather(position.coords.latitude + ',' + position.coords.longitude);
+	// 	});
+	} else { getWeather('Warsaw, Poland'); }
 }
 
 // Initializes keyboard nav
