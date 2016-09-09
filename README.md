@@ -36,7 +36,7 @@ Type 'help' to get the list of commands and search engines.
 - Searchbar script is taken from [WillEccles/startpage](https://github.com/WillEccles/startpage)
 - Background image randomizes on page load, from [Unsplash Source](https://source.unsplash.com/) which pulls from [this collection](https://unsplash.com/collections/304263/)
 - Weather is from [monkeecreate/jquery.simpleWeather](https://github.com/monkeecreate/jquery.simpleWeather)
-~~- Keyboard navigation is thanks to [ccampbell/mousetrap](https://github.com/ccampbell/mousetrap)!~~
+- ~~Keyboard navigation is thanks to [ccampbell/mousetrap](https://github.com/ccampbell/mousetrap)!~~
 
 ##You need extensions for most browsers to use this as your new tab page:
 - [New Tab Redirect for Chrome](https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna)
