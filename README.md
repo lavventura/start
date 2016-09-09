@@ -36,7 +36,7 @@ Type 'help' to get the list of commands and search engines.
 - Searchbar script is taken from [WillEccles/startpage](https://github.com/WillEccles/startpage)
 - Background image randomizes on page load, from [Unsplash Source](https://source.unsplash.com/) which pulls from [this collection](https://unsplash.com/collections/304263/)
 - Weather is from [monkeecreate/jquery.simpleWeather](https://github.com/monkeecreate/jquery.simpleWeather)
-- Favicon is from [flat home icon](http://www.iconarchive.com/show/100-flat-icons-by-graphicloads/home-icon.html)
+- Favicon is from [iconarchive](http://www.iconarchive.com/show/outline-icons-by-iconsmind/Home-2-2-icon.html)
 - ~~Keyboard navigation is thanks to [ccampbell/mousetrap](https://github.com/ccampbell/mousetrap)!~~
 
 ##You need extensions for most browsers to use this as your new tab page:
