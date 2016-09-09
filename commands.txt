@@ -22,13 +22,13 @@ cout << [text]
 	alert([text]);
 
 ## REDDIT ##
-reddit
+rdt
 	Go to reddit
-reddit [-r][-u][-s] [arg]
+rdt [-r][-u][-s] [arg]
 	-r  Go to subreddit [arg]
 	-u  Go to user [arg]
 	-s  Search [arg]
-reddit [df][wg][up][sp]
+rdt [df][wg][up][sp]
 	df  /r/Deliciousfails
 	wg  /r/Weekendgunnit
 	up  /r/Unixporn
@@ -61,6 +61,18 @@ ali
 	Go to aliexpress.com
 ali [arg]
 	Search [arg] on aliexpress.com
+allegro
+	Go to allegro
+allegro [arg]
+	Search [arg] on allegro.pl
+git
+	Go to github.commands
+git [arg]
+	Search [arg] on github.com
+stack
+	Go to stackexchange.com
+stack [arg]
+	Search [arg] on stackexchange.com
 meta
 	Go to metacritic.com
 meta [arg]
@@ -69,14 +81,14 @@ imdb
 	Go to imdb.com
 imdb [arg]
 	Search [arg] on imdb.com
-allegro
-	Go to allegro.player
-allegro [arg]
-	Search [arg] on allegro.pl
 tpb
 	Go to thepiratebay.org
 tpb [arg]
 	Search [arg] on thepiratebay.org
+tp
+	Go to torrentproject.se
+tp [arg]
+	Search [arg] on torrentproject.se	
 yt
 	Go to youtube.com
 yt [arg]
