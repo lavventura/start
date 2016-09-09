@@ -1,4 +1,4 @@
-# ~start [https://lavventura.github.io/start/](LIVE)
+# ~start [https://lavventura.github.io/start/](https://lavventura.github.io/start/)
 
 ![https://lavventura.github.io/start/](screen.png)
 
