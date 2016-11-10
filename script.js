@@ -391,17 +391,19 @@ function getWeather(location) {
 }
 
  // Geolocates the user, otherwise defaulting to Warsaw
+ // Remove // below to enable geolocation
  function loadStuff() {
 if('geolocation' in navigator) {
-	navigator.geolocation.getCurrentPosition(function(position) {
-		getWeather(position.coords.latitude + ',' + position.coords.longitude);
-	});
+	// navigator.geolocation.getCurrentPosition(function(position) {
+	//	getWeather(position.coords.latitude + ',' + position.coords.longitude);
+	//});
 	getWeather('Warsaw, Poland')
 	// navigator.geolocation.getCurrentPosition(function(position) {
 	//   	getWeather(position.coords.latitude + ',' + position.coords.longitude);
 	// 	});
 	} else { getWeather('Warsaw, Poland'); }
 }
+
 
 // Initializes keyboard nav
 function bindMousetraps() {
